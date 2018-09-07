@@ -5,9 +5,9 @@ db design
 ## users table
 |column|Type|Options|
 |------|----|-------|
-|last_name|string|null: false, unique: true|
-|first_name|string|null: false, unique: true|
-|email||(devise), null: false, unique: true|
+|last_name|string|null: false|
+|first_name|string|null: false|
+|email||(devise), null: false|
 |password||(devise), null: false|
 |profile_img|string||
 |review_id||foreign_key: true|
@@ -26,7 +26,7 @@ db design
 |rate|integer||
 |text|text||
 
-association
+[association]
 - belongs_to :space
 
 
@@ -70,7 +70,7 @@ association
 |plan_name||null: false|
 |plan_description|||
 
-association
+[association]
 - has_many :reservations
 - belongs_to :host
 
@@ -83,7 +83,7 @@ association
 |user_id|references|foreign_key: true|
 |space_id|references|foreign_key: true|
 
-association
+[association]
 - belongs_to :space
 - belongs_to :user
 
@@ -93,5 +93,5 @@ association
 |user_id|references|foreign_key: true|
 |space_id|references|foreign_key: true|
 
-association
+[association]
 - belongs_to :space
