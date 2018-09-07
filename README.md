@@ -95,3 +95,4 @@ db design
 
 [association]
 - belongs_to :space
+
